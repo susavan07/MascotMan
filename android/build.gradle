@@ -17,10 +17,10 @@ android {
         exclude 'META-INF/robovm/ios/robovm.xml'
     }
     defaultConfig {
-        applicationId "com.myfirst.game"
+        applicationId "com.myfirstgameingoogleplaystore.game"
         minSdkVersion 14
         targetSdkVersion 33
-        versionCode 1
+        versionCode 2
         versionName "1.0"
     }
     buildTypes {
@@ -82,7 +82,7 @@ task run(type: Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.myfirst.game/com.myfirst.game.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.myfirstgameingoogleplaystore.game/com.myfirstgameingoogleplaystore.game.AndroidLauncher'
 }
 
 eclipse.project.name = appName + "-android"
